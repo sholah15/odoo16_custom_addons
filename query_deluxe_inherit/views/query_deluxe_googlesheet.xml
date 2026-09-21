@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="query_deluxe_googlesheets_tree">
+			<field name="name">query.deluxe.tree.googlesheets</field>
+			<field name="model">querydeluxe</field>
+			<field name="inherit_id" ref="query_deluxe.query_deluxe_view_tree"/>
+			<field name="arch" type="xml">
+				<field name="name" position="replace">
+					<field name="sheets_name"/>
+				</field>
+				<xpath expr="//tree" position="inside">
+					<!-- <field name="gsheets" /> -->
+					<field name="schedule_update_spreadsheet" widget="boolean_toggle"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="query_deluxe_googlesheets_form">
+			<field name="name">query.deluxe.form.googlesheets</field>
+			<field name="model">querydeluxe</field>
+			<field name="inherit_id" ref="query_deluxe.query_deluxe_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//group[2]/label[1]" position="before">
+					<field name="sheets_name"/>
+					<field name="spreadsheets_code"/>
+					<field name="schedule_update_spreadsheet"/>
+					<!-- <label string="Query to GSheets :" for="gsheets"/>
+					<div class="o_row">
+						<field name="gsheets" placeholder="SELECT * FROM res_partner" style="border-bottom: 1px solid blue"/>
+					</div> -->
+				</xpath>
+				<xpath expr="//group[3]" position="inside">
+					<button name="get_data_and_update_sheet" type="object" string="Googlesheets" class="oe_highlight"/>
+				</xpath>
+				<xpath expr="//group[1]" position="replace">
+
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

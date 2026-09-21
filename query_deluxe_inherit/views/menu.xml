@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<odoo>
+	<data>
+		<menuitem id="menu_configuration" 
+				name="Configuration"
+				sequence="10"
+				parent="query_deluxe.query_deluxe_menu" 
+				groups="query_deluxe.group_query_deluxe"/>
+	</data>
+</odoo>
