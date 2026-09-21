@@ -47,13 +47,17 @@ pip install google-auth==1.35.0 gspread==5.7.2
 ## 📂 Struktur Repositori
 
 ```text
-├── models/             # Logika bisnis dan fungsi eksekusi kueri / update_google_sheet
-├── views/              # Tampilan XML (Form, Tree, Menu Konfigurasi, & Embedded Dashboard)
-├── security/           # File IR Model Access & Hak Akses Pengguna
-├── data/               # Data awal / Konfigurasi bawaan
-├── static/             # Aset statis (CSS, JS, Web View untuk embedded dashboard)
-├── __manifest__.py     # Manifest modul Odoo (Dependensi: query_deluxe)
-└── __init__.py         # Inisialisasi package Python
+└── addons/
+    └── odoo16-custom-addons/
+        ├── add_external_dashboard/
+        └── query_deluxe_inherit/
+            ├── models/             # Logika bisnis dan fungsi eksekusi kueri / update_google_sheet
+            ├── views/              # Tampilan XML (Form, Tree, Menu Konfigurasi, & Embedded Dashboard)
+            ├── security/           # File IR Model Access & Hak Akses Pengguna
+            ├── data/               # Data awal / Konfigurasi bawaan
+            ├── static/             # Aset statis (CSS, JS, Web View untuk embedded dashboard)
+            ├── __manifest__.py     # Manifest modul Odoo (Dependensi: query_deluxe)
+            └── __init__.py         # Inisialisasi package Python
 ```
 
 ---
@@ -74,7 +78,7 @@ pip install google-auth==1.35.0 gspread==5.7.2
 3. **Perbarui Daftar Modul & Instal**
    - Aktifkan **Developer Mode** di Odoo 16.
    - Buka menu **Apps** > Klik **Update Apps List**.
-   - Cari modul ini dan klik **Install** (modul `query_deluxe` akan otomatis terdeteksi sebagai dependensi).
+   - Cari modul Looker Studio dan PostgreSQL Query Deluxe - Googlesheets dan klik **Install** (modul `query_deluxe` akan otomatis terdeteksi sebagai dependensi).
 
 4. **Konfigurasi Kredensial GCP**
    - Masuk ke menu Konfigurasi Modul Query Deluxe di Odoo.
