@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <data>
+        <menuitem id="menu_looker_studio_root_menu" 
+                name="Looker Studio"
+                sequence="1" 
+                web_icon="looker_studio,static/description/icon.png"/>
+        
+        <menuitem id="update_looker_menu_top"
+                parent="menu_looker_studio_root_menu" 
+                action="looker_studio.update_looker_action" 
+                sequence="-1" />
+		
+        <menuitem id="looker_dashboard_menu_top" 
+                name="Looker Studio Dashboard" 
+                parent="menu_looker_studio_root_menu" 
+                action="looker_studio.action_looker_dashboard_client" 
+                sequence="1"/>
+        
+        <menuitem id="metalindo_metal_accounting_dashboard_menu_top" 
+                name="Dashboard" 
+                parent="metalindo_metal_accounting.metalindo_metal_accounting_root_menu"
+                action="looker_studio.action_looker_dashboard_client" 
+                sequence="79" />
+    </data>
+</odoo>
+ 

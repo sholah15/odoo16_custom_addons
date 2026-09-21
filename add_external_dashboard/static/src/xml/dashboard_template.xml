@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="looker_studio.dashboardtemplate" owl="1">
+        <div class="o_looker_container">
+            <iframe class="o_centered_looker"
+                    t-att-src="url.value"
+                    frameborder="0"  
+                    allowfullscreen="true" 
+                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            </iframe>
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <data>
+        <record id="update_looker_tree" model="ir.ui.view">
+            <field name="name">update.looker.tree</field>
+            <field name="model">update.looker</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="name"/>
+                    <field name="input_url"/>
+                    <field name="aktif" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="update_looker_form" model="ir.ui.view">
+            <field name="name">update.looker.form</field>
+            <field name="model">update.looker</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="input_url" placeholder="Enter URL here"/>
+                            <field name="aktif"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record> 
+
+        <record model='ir.actions.act_window' id='update_looker_action'>
+            <field name="name">Input URL</field>
+            <field name="res_model">update.looker</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+        </record>        
+
+    </data>     
+</odoo>
